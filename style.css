@@ -1,0 +1,176 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  --webkit-font-smoothing: antialiased;
+  --moz-osx-font-smothing: grayscale;
+}
+
+:root {
+  font-size: 62.5%;
+
+  --color-base-backgroud: #065e7c;
+  --color-base: rgb(255, 255, 255);
+  --color-base-hover: #05475e;
+}
+
+body {
+  font-size: 1.6rem;
+}
+
+html,
+body,
+input {
+  font-family: "Mulish", sans-serif;
+}
+
+.app {
+  width: 100%;
+}
+
+nav {
+  padding: 16px;
+  align-items: center;
+}
+
+header nav {
+  background: var(--color-base-backgroud);
+  display: grid;
+  grid-template-columns: 1fr 2fr 1fr;
+}
+
+.input-wrapper {
+  width: 100%;
+  color: black;
+}
+
+.input-wrapper input {
+  width: 100%;
+  height: 4rem;
+  border: 0;
+  border-radius: 0.4rem;
+  background: hsl(0deg 0% 100% / 20%);
+}
+
+.input-wrapper input::placeholder {
+  opacity: 0.56;
+  color: var(--color-base);
+  padding: 1.4rem 1.2rem;
+}
+
+.input-wrapper label {
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+  position: absolute;
+}
+
+.avatar {
+  margin: auto;
+}
+
+header img {
+  width: 4rem;
+  border-radius: 50%;
+}
+
+main .img-wrapper img {
+  width: 100%;
+  height: 100%;
+}
+
+h1,
+.text-wrapper,
+.sidebar {
+  margin: 3.2rem 0 0.8rem;
+}
+
+section .reaction {
+  display: block;
+  gap: 1.2rem;
+}
+
+span {
+  background: var(--color-base-backgroud);
+  border-radius: 100%;
+  border: 1rem solid var(--color-base-backgroud);
+}
+
+span:hover {
+  background: var(--color-base-hover);
+  border: 1rem solid var(--color-base-hover);
+}
+
+section .text-wrapper {
+  /* margin-top: 3rem; */
+  line-height: 2.5rem;
+}
+
+.reaction,
+.text-wrapper,
+.sidebar {
+  margin: 3.1rem 2.2rem;
+}
+
+.section-wrapper {
+  display: grid;
+  grid-template-columns: 1fr 2fr;
+  gap: 1.3rem;
+  align-items: center;
+  margin-top: 3.2rem;
+}
+
+.section-wrapper img {
+  height: 8.6rem;
+}
+
+.section-wrapper p {
+  padding-top: 1.3rem;
+  line-height: 2.5rem;
+}
+
+footer {
+  background: var(--color-base-backgroud);
+  padding: 2.6rem;
+  color: var(--color-base);
+  text-align: center;
+}
+
+@media (min-width: 1024px) {
+  section {
+    grid-area: section;
+  }
+
+  .sidebar {
+    grid-area: sidebar;
+  }
+
+  header img {
+    margin-left: 12rem;
+  }
+
+  main {
+    margin: 4.4rem 10.9rem;
+    display: grid;
+    grid-template-areas: "section section sidebar";
+    gap: 3.4rem;
+  }
+
+  h1,
+  .text-wrapper,
+  span,
+  .sidebar {
+    margin: 3.1rem 0 0;
+  }
+
+  section .reaction {
+    display: grid;
+    grid-template-columns: 5fr 0.1fr 0.1fr;
+
+    align-items: center;
+  }
+
+  .img-wrapper img {
+    width: 100%;
+  }
+}
